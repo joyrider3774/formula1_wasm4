@@ -11,6 +11,7 @@ The aim of the game, is to avoid hitting other traffic coming down the screen, y
 
 ## Controls wasm4
 arrow key left/right and mouse button left / right: Move Player car left or right
+
 x or z or mouse button: Start a new game at the boot or gameover screen
 
 
