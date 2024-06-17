@@ -9,9 +9,19 @@ Formula 1 Game & Watch is a small, fictive formula 1 game & watch style lcd game
 ## Playing the Game
 The aim of the game, is to avoid hitting other traffic coming down the screen, you do this by moving your car on the bottom left or right. 
 
-## Controls wasm4
-arrow key left/right and mouse button left / right: Move Player car left or right
+## Controls
 
-x or z or mouse button: Start a new game at the boot or gameover screen
+| Keys | Action |
+| ------ | ------ |
+| arrow key left | Move Player car left |
+| arrow key right | Move Player car right |
+| x | Start a new game at the boot or gameover screen |
+| c | Start a new game at the boot or gameover screen |
+
+
+| Mouse | Action |
+| ------ | ------ |
+| left button | Move Player car left, start new game at the boot or gameover screen |
+| right button | Move Player car right |
 
 
