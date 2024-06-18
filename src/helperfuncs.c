@@ -130,3 +130,13 @@ void clear(ColorIndex Index)
 	rect(0,0, SCREEN_SIZE, SCREEN_SIZE);
 	setDrawColor(Index1, Index2, Index3, Index4);
 }
+
+bool mouseInGameBounds()
+{
+	return (*MOUSE_Y <= SCREEN_SIZE) && (*MOUSE_X <= SCREEN_SIZE) && (*MOUSE_Y >= 0) && (*MOUSE_X >=0);
+}
+
+bool anyButtonReleased()
+{
+	return buttonReleased(BUTTON_1) || buttonReleased(BUTTON_2) || buttonReleased(BUTTON_DOWN) || buttonReleased(BUTTON_LEFT) || buttonReleased(BUTTON_RIGHT) || buttonReleased(BUTTON_UP);
+}

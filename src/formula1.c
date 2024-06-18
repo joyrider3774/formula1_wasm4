@@ -184,10 +184,10 @@ void Game()
 		GameState -= GSInitDiff;
 	}
 
-	if(buttonReleased(BUTTON_LEFT) || mouseButtonReleased(MOUSE_LEFT))
+	if(buttonReleased(BUTTON_LEFT) || ((mouseButtonReleased(MOUSE_LEFT) &&  !anyButtonReleased() && mouseInGameBounds())))
 		if(CanMove)
 			MoveLeft();
-	if(buttonReleased(BUTTON_RIGHT) || mouseButtonReleased(MOUSE_RIGHT))		
+	if(buttonReleased(BUTTON_RIGHT) || ((mouseButtonReleased(MOUSE_RIGHT) && !anyButtonReleased() && mouseInGameBounds())))
 		if(CanMove)
 			MoveRight();
 
@@ -259,7 +259,7 @@ void GameOver()
 
 	if(buttonReleased(BUTTON_LEFT) || buttonReleased(BUTTON_RIGHT) || buttonReleased(BUTTON_UP) ||
 		buttonReleased(BUTTON_DOWN) || buttonReleased(BUTTON_1) || buttonReleased(BUTTON_2) || 
-		mouseButtonReleased(MOUSE_LEFT) || mouseButtonReleased(MOUSE_RIGHT))
+		((mouseButtonReleased(MOUSE_LEFT) || mouseButtonReleased(MOUSE_RIGHT)) && !anyButtonReleased() && mouseInGameBounds()))
 		GameState = GSGameInit;
 	setDrawColor(3,4,2,1);
 	blit(background, 0, 0, backgroundWidth, backgroundHeight, backgroundFlags);
@@ -292,7 +292,7 @@ void Intro()
 
 	if(buttonReleased(BUTTON_LEFT) || buttonReleased(BUTTON_RIGHT) || buttonReleased(BUTTON_UP) ||
 		buttonReleased(BUTTON_DOWN) || buttonReleased(BUTTON_1) || buttonReleased(BUTTON_2) || 
-		mouseButtonReleased(MOUSE_LEFT) || mouseButtonReleased(MOUSE_RIGHT))
+		((mouseButtonReleased(MOUSE_LEFT) || mouseButtonReleased(MOUSE_RIGHT)) && !anyButtonReleased() && mouseInGameBounds()))
 		GameState = GSGameInit;
 	setDrawColor(3,4,2,1);
 	blit(background, 0, 0, backgroundWidth, backgroundHeight, backgroundFlags);

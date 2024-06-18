@@ -31,4 +31,6 @@ void getDrawColor(ColorIndex *Index1, ColorIndex *Index2, ColorIndex *Index3, Co
 void setDrawColor(ColorIndex Index1, ColorIndex Index2, ColorIndex Index3, ColorIndex Index4);
 bool buttonReleased(uint32_t Button);
 bool mouseButtonReleased(uint32_t Button);
+bool mouseInGameBounds();
+bool anyButtonReleased();
 #endif
